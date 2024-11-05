@@ -7,11 +7,12 @@ interface IntroductionProps {
 }
 
 const Introduction = ({ handleChangeStep }: IntroductionProps) => {
-  // State for control name
   const { userResponse, handleResponse } = useFormContext();
+
+  // Local state to manage the input for the user's name
   const [inputName, setInputName] = useState(userResponse.name);
   
-  // Control the sending of the response and change the step
+  // Function to handle form submission, update the name in context, and move to the next step
   const handleSubmit = () => {
     handleResponse("name", inputName || "");
     handleChangeStep(2);
@@ -28,7 +29,11 @@ const Introduction = ({ handleChangeStep }: IntroductionProps) => {
         Queremos conocerte, ¿cuál es tu nombre?
       </p>
 
-      <input onChange={(e) => setInputName(e.target.value)} value={inputName || ''} placeholder='Nombre' />
+      <input 
+        onChange={(e) => setInputName(e.target.value)} 
+        value={inputName || ''} 
+        placeholder='Nombre' 
+      />
       <button onClick={handleSubmit}>Comenzar</button>
     </IntroductionContainer>
   )
