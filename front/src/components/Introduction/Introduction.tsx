@@ -1,10 +1,22 @@
+import { useState } from 'react';
 import { IntroductionContainer } from './styled.components'
 
 interface IntroductionProps {
   handleChangeStep : Function;
+  handleResponse   : Function;
+  name?            : string;
 }
 
-const Introduction = ({ handleChangeStep }: IntroductionProps) => {
+const Introduction = ({ handleChangeStep, handleResponse, name }: IntroductionProps) => {
+  // State for control name
+  const [inputName, setInputName] = useState(name);
+  
+  // Control the sending of the response and change the step
+  const handleSubmit = () => {
+    handleResponse(inputName, "name");
+    handleChangeStep(2);
+  }
+
   return (
     <IntroductionContainer>
       <p>
@@ -16,9 +28,9 @@ const Introduction = ({ handleChangeStep }: IntroductionProps) => {
         Queremos conocerte, ¿cuál es tu nombre?
       </p>
 
-      <input type="text" placeholder='Nombre' />
+      <input onChange={(e) => setInputName(e.target.value)} defaultValue={name} type="text" placeholder='Nombre' />
 
-      <button onClick={() => handleChangeStep(2)}>Comenzar</button>
+      <button onClick={handleSubmit}>Comenzar</button>
     </IntroductionContainer>
   )
 }
