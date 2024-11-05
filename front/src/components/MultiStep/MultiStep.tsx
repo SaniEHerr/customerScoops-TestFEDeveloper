@@ -26,6 +26,8 @@ const MultiStep = ({ handleChangeStep, step }: MultiStepProps) => {
     category  : '',
   })
 
+  console.log(userResponse);
+  
   // Set a response according to the category
   const handleResponse = (response: string, category: string) => {
     setUserResponse((prevResponses) => ({
@@ -40,7 +42,7 @@ const MultiStep = ({ handleChangeStep, step }: MultiStepProps) => {
       case 1:
         return <Introduction name={userResponse.name} handleChangeStep={handleChangeStep} handleResponse={handleResponse} />;
       case 2:
-        return <UserPosition name={userResponse.name} />
+        return <UserPosition name={userResponse.name} position={userResponse.position} handleResponse={handleResponse} />
       // case 3:
         // return <Step3 />;
       // default:
