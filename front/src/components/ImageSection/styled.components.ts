@@ -19,7 +19,7 @@ export const ImageSectionContainer = styled.section`
     justify-items : center;
     align-items   : start;
     gap           : .5rem;
-    color         : #231331;
+    color         : var(--primary-color);
 
     .step {
       font-size   : 21px;
@@ -32,7 +32,7 @@ export const ImageSectionContainer = styled.section`
       width            : 1.5px;
       height           : 26.24px;
       font-family      : 'SF Pro Display', sans-serif;
-      background-color : #231331;
+      background-color : var(--primary-color);
     }
 
     span {
