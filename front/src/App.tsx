@@ -1,8 +1,11 @@
 import './App.css'
+import ImageSection from './components/ImageSection/ImageSection'
 
 const App = () => {
   return (
-    <h1>CustomerScoops Test Frontend Developer</h1>
+    <main>
+      <ImageSection />
+    </main>
   )
 }
 
