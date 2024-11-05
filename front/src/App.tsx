@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <main>
-      <ImageSection />
+      <ImageSection step={step} />
       <MultiStep 
         handleChangeStep={handleChangeStep}
         step={step}

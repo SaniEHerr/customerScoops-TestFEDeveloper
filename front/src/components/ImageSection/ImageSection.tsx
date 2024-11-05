@@ -10,9 +10,9 @@ const ImageSection = ( {step}: ImageSectionProps ) => {
       <img src="/sectionImgMobile.png" width="365" height="213" alt="CustomerScoops Logo" />
       <img className='section-image' src="/logoMobile.png" width="100" height="36.44" alt="CustomerScoops Logo" />
       <div>
-        <span className='step'>{ step || "01"}</span>
+        <span className='step'>0{ step || "01"}</span>
         <span className='line'></span>
-        <span>08</span>
+        <span>06</span>
       </div>
     </ImageSectionContainer>
   )
