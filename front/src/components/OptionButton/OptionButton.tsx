@@ -1,3 +1,4 @@
+import { UserResponseData } from "../../contexts/FormContext";
 import { OptionButtonContainer } from "./styled.components"
 
 interface OptionButtonProps {
@@ -7,10 +8,10 @@ interface OptionButtonProps {
   isSelected        : boolean;
 }
 
-const OptionButton = ({ value, handleChangeValue, category, isSelected  }: OptionButtonProps) => {
+const OptionButton = ({ value, handleChangeValue, category, isSelected }: OptionButtonProps) => {
   const handleSelect = () => {
-    handleChangeValue(value, category)
-  }
+    handleChangeValue(category as keyof UserResponseData, value);
+  };
 
   return (
     <OptionButtonContainer

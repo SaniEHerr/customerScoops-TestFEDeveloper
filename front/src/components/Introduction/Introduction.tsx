@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import { IntroductionContainer } from './styled.components'
+import { useFormContext } from '../../contexts/FormContext';
 
 interface IntroductionProps {
   handleChangeStep : Function;
-  handleResponse   : Function;
-  name?            : string;
 }
 
-const Introduction = ({ handleChangeStep, handleResponse, name }: IntroductionProps) => {
+const Introduction = ({ handleChangeStep }: IntroductionProps) => {
   // State for control name
-  const [inputName, setInputName] = useState(name);
+  const { userResponse, handleResponse } = useFormContext();
+  const [inputName, setInputName] = useState(userResponse.name);
   
   // Control the sending of the response and change the step
   const handleSubmit = () => {
-    handleResponse(inputName, "name");
+    handleResponse("name", inputName || "");
     handleChangeStep(2);
   }
 
@@ -28,8 +28,7 @@ const Introduction = ({ handleChangeStep, handleResponse, name }: IntroductionPr
         Queremos conocerte, ¿cuál es tu nombre?
       </p>
 
-      <input onChange={(e) => setInputName(e.target.value)} defaultValue={name} type="text" placeholder='Nombre' />
-
+      <input onChange={(e) => setInputName(e.target.value)} value={inputName || ''} placeholder='Nombre' />
       <button onClick={handleSubmit}>Comenzar</button>
     </IntroductionContainer>
   )

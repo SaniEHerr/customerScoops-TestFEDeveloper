@@ -1,16 +1,13 @@
+import { useFormContext } from "../../contexts/FormContext";
 import OptionButton from "../OptionButton/OptionButton"
 
-interface UserPositionProps {
-  name ?           : string;
-  position ?       : string;
-  handleResponse   : Function;
-}
-
-const UserPosition = ({ name, handleResponse, position }: UserPositionProps) => {
+const UserPosition = () => {
+  const { userResponse, handleResponse } = useFormContext();
+  
   return (
     <div>
       <p>
-        Genial {name}, ahora nos gustaría tener cierta info para diseñar una gran propuesta de valor para ti:
+        Genial {userResponse.name}, ahora nos gustaría tener cierta info para diseñar una gran propuesta de valor para ti:
       </p>
 
       <p>
@@ -18,31 +15,31 @@ const UserPosition = ({ name, handleResponse, position }: UserPositionProps) => 
       </p>
 
       <OptionButton 
-        category={"position"} 
+        category="position" 
         handleChangeValue={handleResponse} 
         value="Board member" 
-        isSelected={position === "Board member"}
+        isSelected={userResponse.position === "Board member"}
       />
 
       <OptionButton 
-        category={"position"} 
+        category="position" 
         handleChangeValue={handleResponse} 
         value="Board member 2" 
-        isSelected={position === "Board member 2"}
+        isSelected={userResponse.position === "Board member 2"}
       />
 
       <OptionButton 
-        category={"position"} 
+        category="position" 
         handleChangeValue={handleResponse} 
         value="Board member 3" 
-        isSelected={position === "Board member 3"}
+        isSelected={userResponse.position === "Board member 3"}
       />
 
       <OptionButton 
-        category={"position"} 
+        category="position" 
         handleChangeValue={handleResponse} 
         value="Board member 4" 
-        isSelected={position === "Board member 4"}
+        isSelected={userResponse.position === "Board member 4"}
       />
     </div>
   )

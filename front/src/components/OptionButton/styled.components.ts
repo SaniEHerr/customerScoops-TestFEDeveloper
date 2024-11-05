@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-export const OptionButtonContainer = styled.button<{ isSelected: boolean }>`
-  padding       : .5rem 1rem;
-  border-radius : .5rem;
-  border-color  : var(--primary-color);
-  color         : var(--primary-color);
-  background-color: ${({ isSelected }) => isSelected ? "red" : "transparent"};
-
+export const OptionButtonContainer = styled.div<{ isSelected: boolean }>`
+  padding: 10px;
+  background-color: ${({ isSelected }) => (isSelected ? "red" : "transparent")};
+  color: ${({ isSelected }) => (isSelected ? "white" : "black")};
+  border: 2px solid ${({ isSelected }) => (isSelected ? "red" : "gray")};
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
   &:hover {
-    background-color: ${({ isSelected }) => isSelected ? "red" : "lightgray"};
+    background-color: ${({ isSelected }) => (isSelected ? "darkred" : "lightgray")};
   }
 `;

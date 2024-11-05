@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Introduction from "../Introduction/Introduction";
 import UserPosition from "../UserPosition/UserPosition";
 import Pagination from "../Pagination/Pagination";
@@ -8,41 +7,15 @@ interface MultiStepProps {
   step             : number;
 }
 
-interface userReponseData {
-  name      ?: string;
-  position  ?: string;
-  challenge ?: string;
-  crm       ?: string;
-  category  ?: string;
-}
-
 const MultiStep = ({ handleChangeStep, step }: MultiStepProps) => {
-  // State for control user response
-  const [userResponse, setUserResponse] = useState<userReponseData>({
-    name      : '',
-    position  : '',
-    challenge : '',
-    crm       : '',
-    category  : '',
-  })
 
-  console.log(userResponse);
-  
-  // Set a response according to the category
-  const handleResponse = (response: string, category: string) => {
-    setUserResponse((prevResponses) => ({
-      ...prevResponses,
-      [category]: response,
-    }));
-  };
-
-  // Set the content acording the step
+  // Set the view acording the step
   const renderStepContent = () => {
     switch (step) {
       case 1:
-        return <Introduction name={userResponse.name} handleChangeStep={handleChangeStep} handleResponse={handleResponse} />;
+        return <Introduction handleChangeStep={handleChangeStep} />;
       case 2:
-        return <UserPosition name={userResponse.name} position={userResponse.position} handleResponse={handleResponse} />
+        return <UserPosition />
       // case 3:
         // return <Step3 />;
       // default:
