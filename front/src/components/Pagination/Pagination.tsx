@@ -1,3 +1,6 @@
+import ArrowSmLeft from "../../assets/icons/ArrowSmLeft";
+import { PaginationContainer } from "./styled.components";
+
 interface PaginationProps {
   handleChangeStep : Function;
   step             : number;
@@ -17,16 +20,18 @@ const Pagination = ({ handleChangeStep, step }: PaginationProps) => {
   };
 
   return (
-    <div>
+    <PaginationContainer>
       {
         // Only show pagination buttons if the current step is not 1
         step !== 1 &&
         <>
-          <button disabled={step === 1} onClick={prevStep}>Anterior</button>
-          <button disabled={step === 6} onClick={nextStep}>Siguiente</button>
+          <button className="prev-button" disabled={step === 1} onClick={prevStep}>
+            <ArrowSmLeft />
+          </button>
+          <button className="next-button" disabled={step === 6} onClick={nextStep}>Siguiente</button>
         </>
       }
-    </div>
+    </PaginationContainer>
   )
 }
 

@@ -21,7 +21,7 @@ export const IntroductionContainer = styled.section`
     background-color : transparent;
     border           : none;
     border-bottom    : 1px solid var(--primary-color);
-    padding-bottom   : 0.5rem;
+    padding-bottom   : 0.3rem;
     outline          : none;
     transition       : border-color 0.3s ease;
     font-size        : 17px;
