@@ -8,7 +8,7 @@ const UserPosition = () => {
   return (
     <UserPositionContainer>
       <p>
-        Genial {userResponse.name}, ahora nos gustaría tener cierta info para diseñar una gran propuesta de valor para ti:
+        <span>Genial {userResponse.name}</span>, ahora nos gustaría tener cierta info para diseñar una gran propuesta de valor para ti:
       </p>
 
       <p>

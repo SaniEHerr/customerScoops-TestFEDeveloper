@@ -7,6 +7,16 @@ export const UserPositionContainer = styled.section`
   flex-direction : column;
   gap            : 2rem;
 
+  p {
+    font-size   : 18px;
+    font-weight : 300;
+    line-height : 23.4px;
+  }
+
+  span {
+    font-weight: 700;
+  }
+
   .positions-grid {
     display               : grid;
     grid-template-columns : repeat(2, 1fr);

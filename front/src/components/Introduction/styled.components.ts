@@ -14,7 +14,7 @@ export const IntroductionContainer = styled.section`
   }
 
   span {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   input {
