@@ -6,7 +6,7 @@ export interface UserResponseData {
   position  ?: string;
   challenge ?: string;
   crm       ?: string;
-  category  ?: string;
+  industry  ?: string;
 }
 
 // Interface for the context properties, including user response and handler function
