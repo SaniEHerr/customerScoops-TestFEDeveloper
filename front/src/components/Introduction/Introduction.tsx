@@ -21,7 +21,7 @@ const Introduction = ({ handleChangeStep }: IntroductionProps) => {
   return (
     <IntroductionContainer>
       <p>
-        Muchas gracias por tu interés en conocer customerScoops, que a través de Formularios Conversacionales Inteligente te ayudamos 
+        Muchas gracias por tu interés en conocer <span>customerScoops</span>, que a través de Formularios Conversacionales Inteligente te ayudamos 
         a aumentar el revenue y rentabilidad de tu negocio.
       </p>
 
@@ -34,6 +34,7 @@ const Introduction = ({ handleChangeStep }: IntroductionProps) => {
         value={inputName || ''} 
         placeholder='Nombre' 
       />
+      
       <button onClick={handleSubmit}>Comenzar</button>
     </IntroductionContainer>
   )
