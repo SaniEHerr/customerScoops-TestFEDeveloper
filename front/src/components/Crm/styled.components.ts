@@ -6,7 +6,7 @@ export const CrmContainer = styled.section`
   flex-direction : column;
   gap            : 2rem;
 
-  @media (min-width: 1023px) {
+  @media (min-width: 1024px) {
     width : 400px;
   }
 
@@ -14,7 +14,7 @@ export const CrmContainer = styled.section`
     font-size   : 18px;
     font-weight : 300;
 
-    @media (min-width: 1023px) {
+    @media (min-width: 1024px) {
       font-size : 19px;
     }
   }
@@ -29,7 +29,7 @@ export const CrmContainer = styled.section`
     row-gap               : .5rem;
     column-gap            : .5rem;
 
-    @media (min-width: 1023px) {
+    @media (min-width: 1024px) {
       grid-template-columns : repeat(3, 1fr);
     }
   }

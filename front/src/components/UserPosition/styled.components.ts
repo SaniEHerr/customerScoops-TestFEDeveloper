@@ -32,7 +32,7 @@ export const UserPositionContainer = styled.section`
     row-gap               : .5rem;
     column-gap            : .5rem;
 
-    @media (min-width: 1023px) {
+    @media (min-width: 1024px) {
       grid-template-columns : repeat(3, 1fr);
     }
   }

@@ -6,7 +6,7 @@ export const ChallengesContainer = styled.section`
   flex-direction  : column;
   gap             : 1rem;
 
-  @media (min-width: 1023px) {
+  @media (min-width: 1024px) {
     width : 400px;
   }
 
@@ -14,7 +14,7 @@ export const ChallengesContainer = styled.section`
     font-size   : 18px;
     font-weight : 300;
 
-    @media (min-width: 1023px) {
+    @media (min-width: 1024px) {
       font-size : 19px;
     }
   }
@@ -24,7 +24,7 @@ export const ChallengesContainer = styled.section`
     grid-template-columns : repeat(1, 1fr);
     gap                   : .5rem;
 
-    @media (min-width: 1023px) {
+    @media (min-width: 1024px) {
       grid-template-columns : repeat(2, 1fr);
       width                 : 300px;
     }
@@ -45,7 +45,7 @@ export const OptionsContainer = styled.div<{ $isSelected: boolean }>`
   color            : ${props => props.$isSelected ? '#F4F4F4' : ''};
   transition       : background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
 
-  @media (min-width: 1023px) {
+  @media (min-width: 1024px) {
     width           : 180px;
     height          : 39px;
     justify-content : start;
@@ -64,7 +64,7 @@ export const OptionsContainer = styled.div<{ $isSelected: boolean }>`
     align-items      : center;
     justify-content  : center;
 
-    @media (min-width: 1023px) {
+    @media (min-width: 1024px) {
       min-width  : 30px;
       min-height : 30px;
     }

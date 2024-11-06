@@ -6,7 +6,7 @@ export const IndustryContainer = styled.section`
   flex-direction : column;
   gap            : 2rem;
 
-  @media (min-width: 1023px) {
+  @media (min-width: 1024px) {
     width : 400px;
   }
 
@@ -18,7 +18,7 @@ export const IndustryContainer = styled.section`
       font-size   : 18px;
       font-weight : 300;
 
-      @media (min-width: 1023px) {
+      @media (min-width: 1024px) {
         font-size : 19px;
       }
     }
@@ -27,7 +27,7 @@ export const IndustryContainer = styled.section`
       font-size   : 18px;
       font-weight : 700;
 
-      @media (min-width: 1023px) {
+      @media (min-width: 1024px) {
         font-size : 19px;
       }
     }
@@ -39,9 +39,8 @@ export const IndustryContainer = styled.section`
     row-gap               : .5rem;
     column-gap            : .5rem;
 
-    @media (min-width: 1023px) {
+    @media (min-width: 1024px) {
       grid-template-columns : repeat(3, 1fr);
-      /* width                 : 300px; */
     }
   }
 `

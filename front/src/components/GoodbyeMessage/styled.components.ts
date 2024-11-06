@@ -7,7 +7,7 @@ export const GoodbyeMessageContainer = styled.section`
   gap            : 2rem;
   min-width      : 304px;
 
-  @media (min-width: 1023px) {
+  @media (min-width: 1024px) {
     width : 400px;
   }
 
@@ -23,7 +23,7 @@ export const GoodbyeMessageContainer = styled.section`
     p {
       font-style : normal;
 
-      @media (min-width: 1023px) {
+      @media (min-width: 1024px) {
         font-size : 30px;
       }
     }

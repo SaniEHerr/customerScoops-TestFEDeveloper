@@ -28,7 +28,7 @@ export const PaginationContainer = styled.div`
     position         : relative;
     cursor           : pointer;
 
-    @media (min-width: 1023px) {
+    @media (min-width: 1024px) {
       width : 140px;
     }
 
@@ -45,8 +45,7 @@ export const PaginationContainer = styled.div`
       position : absolute;
       right    : 20px;
 
-
-      @media (min-width: 1023px) {
+      @media (min-width: 1024px) {
         display : flex;
       }
     }
