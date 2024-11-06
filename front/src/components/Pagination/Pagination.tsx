@@ -22,14 +22,15 @@ const Pagination = ({ handleChangeStep, step }: PaginationProps) => {
   return (
     <PaginationContainer>
       {
-        // Only show pagination buttons if the current step is not 1
-        step !== 1 &&
-        <>
-          <button className="prev-button" disabled={step === 1} onClick={prevStep}>
-            <ArrowSmLeft />
-          </button>
-          <button className="next-button" disabled={step === 6} onClick={nextStep}>Siguiente</button>
-        </>
+        // Only show pagination buttons if the current step is not 1 or 6
+        step !== 1 && step !== 6 && (
+          <>
+            <button className="prev-button" disabled={step === 1} onClick={prevStep}>
+              <ArrowSmLeft />
+            </button>
+            <button className="next-button" disabled={step === 6} onClick={nextStep}>Siguiente</button>
+          </>
+        )
       }
     </PaginationContainer>
   )

@@ -4,6 +4,7 @@ import Pagination from "../Pagination/Pagination";
 import Challenges from "../Challenges/Challenges";
 import Crm from "../Crm/Crm";
 import Industry from "../Industry/Industry";
+import GoodbyeMessage from "../GoodbyeMessage/GoodbyeMessage";
 
 interface MultiStepProps {
   handleChangeStep : Function;
@@ -25,8 +26,10 @@ const MultiStep = ({ handleChangeStep, step }: MultiStepProps) => {
         return <Crm />;
       case 5:
         return <Industry />;
-      // default:
-        // return <Step1 />;
+      case 6:
+        return <GoodbyeMessage />;
+      default:
+        return <Introduction handleChangeStep={handleChangeStep} />;
     }
   };
   
