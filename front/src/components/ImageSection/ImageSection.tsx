@@ -7,8 +7,11 @@ interface ImageSectionProps {
 const ImageSection = ( {step}: ImageSectionProps ) => {
   return (
     <ImageSectionContainer>
-      <img className='section-image' src="/sectionImgMobile.png" alt="CustomerScoops Logo" />
-      <img className='logo-image' src="/logoMobile.png" alt="CustomerScoops Logo" />
+      <img className='section-image' src="/sectionImgDesktop.png" alt="CustomerScoops Logo" />
+
+      {/* <img className='section-image' src="/sectionImgMobile.png" alt="CustomerScoops Logo" /> */}
+      {/* <img className='logo-image' src="/logoMobile.png" alt="CustomerScoops Logo" /> */}
+
       <div>
         <span className='step'>0{ step || "01"}</span>
         <span className='line'></span>

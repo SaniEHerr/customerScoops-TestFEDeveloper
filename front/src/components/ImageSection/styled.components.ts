@@ -5,13 +5,25 @@ export const ImageSectionContainer = styled.section`
   align-items     : center;
   position        : relative;
   justify-content : end;
-  width           : 100%;
+  max-width       : 100%;
+
+  /* @media (min-width: 1023px) {
+    max-width       : 1024px;
+  } */
+
 
   .section-image {
     width      : 100%;
     height     : auto;
     max-width  : 364px;
     max-height : 213px;
+
+    @media (min-width: 1023px) {
+      width      : 100%;
+      height     : auto;
+      max-width  : 635px;
+      max-height : 655px;
+    }
   }
 
   .logo-image {
@@ -26,6 +38,10 @@ export const ImageSectionContainer = styled.section`
     /* Small devices */
     @media (max-width: 330px) {
       right : 200px;
+    }
+
+    @media (min-width: 1023px) {
+      display: none;
     }
   }
 
@@ -59,6 +75,7 @@ export const ImageSectionContainer = styled.section`
       font-weight : 400;
     }
   }
+`
 
 
   /* @media (min-width: 768px) {
@@ -80,4 +97,3 @@ export const ImageSectionContainer = styled.section`
       max-width: 180px;
     }
   } */
-`

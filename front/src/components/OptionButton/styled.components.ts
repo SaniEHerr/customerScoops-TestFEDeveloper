@@ -20,4 +20,9 @@ export const OptionButtonContainer = styled.div<{ $isSelected: boolean; $isFullW
   ${props => props.$isFullWidth && `
     grid-column: span 2;
   `}
+
+  @media (min-width: 1023px) {
+    min-width        : 125.65px;
+    min-height       : 39px;
+  }
 `;

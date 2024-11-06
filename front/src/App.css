@@ -6,3 +6,11 @@
   align-items     : center;
   padding-bottom  : 2rem;
 }
+
+@media (min-width: 1024px) {
+  .content-wraper {
+    flex-direction : row-reverse;
+    gap            : 6rem;
+    padding-left   : 2rem;
+  }
+}

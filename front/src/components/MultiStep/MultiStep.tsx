@@ -35,8 +35,13 @@ const MultiStep = ({ handleChangeStep, step }: MultiStepProps) => {
   
   return (
     <section className="wrapper">
-      {renderStepContent()}
-      <Pagination step={step} handleChangeStep={handleChangeStep} />
+      <img className='logo-image' src="/logoDesktop.png" alt="CustomerScoops Logo" />
+
+      <div className="content-container">
+        {renderStepContent()}
+        
+        <Pagination step={step} handleChangeStep={handleChangeStep} />
+      </div>
     </section>
   )
 }

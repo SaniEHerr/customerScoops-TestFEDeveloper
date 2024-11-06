@@ -28,3 +28,33 @@ html, body {
   flex-direction : column;
   gap            : 2rem;
 }
+
+@media (min-width: 1023px) {
+  .wrapper {
+    padding-inline : 0rem;
+    /* height         : 400px; */
+  }
+}
+
+.content-container {
+  display        : flex;
+  flex-direction : column;
+  gap            : 2rem;
+}
+
+@media (min-width: 1023px) {
+  .content-container {
+    height : 400px;
+  }
+}
+
+.logo-image {
+  width      : 113px;
+  height     : 41.18px;
+}
+
+@media (max-width: 1023px) {
+  .logo-image {
+    display : none;
+  }
+}
