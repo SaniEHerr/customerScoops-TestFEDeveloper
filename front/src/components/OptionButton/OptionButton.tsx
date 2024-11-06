@@ -1,26 +1,27 @@
-import { UserResponseData } from "../../contexts/FormContext";
+// OptionButton.tsx
 import { OptionButtonContainer } from "./styled.components"
 
 interface OptionButtonProps {
-  value ?           : string;
+  value ?: string;
   handleChangeValue : Function;
-  category          : string;
-  isSelected        : boolean;
+  category : string;
+  isSelected : boolean;
 }
 
 const OptionButton = ({ value, handleChangeValue, category, isSelected }: OptionButtonProps) => {
   const handleSelect = () => {
-    handleChangeValue(category as keyof UserResponseData, value);
+    handleChangeValue(category, value);
   };
 
   return (
+    // Use `$isSelected` to make it a transient prop and avoid console errors related to DOM
     <OptionButtonContainer
       onClick={handleSelect}
-      isSelected={isSelected}
+      $isSelected={isSelected}
     >
       {value}
     </OptionButtonContainer>
-  )
+  );
 }
 
-export default OptionButton
+export default OptionButton;
