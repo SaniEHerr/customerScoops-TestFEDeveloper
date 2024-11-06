@@ -32,7 +32,6 @@ html, body {
 @media (min-width: 1023px) {
   .wrapper {
     padding-inline : 0rem;
-    /* height         : 400px; */
   }
 }
 

@@ -9,7 +9,10 @@ export const CrmContainer = styled.section`
   p {
     font-size   : 18px;
     font-weight : 300;
-    line-height : 23.4px;
+
+    @media (min-width: 1023px) {
+      font-size : 19px;
+    }
   }
 
   span {
@@ -21,5 +24,9 @@ export const CrmContainer = styled.section`
     grid-template-columns : repeat(2, 1fr);
     row-gap               : .5rem;
     column-gap            : .5rem;
+
+    @media (min-width: 1023px) {
+      grid-template-columns : repeat(3, 1fr);
+    }
   }
 `

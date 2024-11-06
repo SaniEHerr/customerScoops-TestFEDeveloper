@@ -22,7 +22,15 @@ export const OptionButtonContainer = styled.div<{ $isSelected: boolean; $isFullW
   `}
 
   @media (min-width: 1023px) {
-    min-width        : 125.65px;
-    min-height       : 39px;
+    min-width      : 125.65px;
+    min-height     : 39px;
+    white-space    : normal;
+    /* word-wrap      : break-word; */
+    padding-inline : 10px;
+
+    /* Remove full-width setting on larger screens */
+      ${props => props.$isFullWidth && `
+      grid-column: auto;
+    `}
   }
 `;
