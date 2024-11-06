@@ -6,9 +6,10 @@ interface OptionButtonProps {
   handleChangeValue  : Function;
   category           : string;
   isSelected         : boolean;
+  isFullWidth?       : boolean; 
 }
 
-const OptionButton = ({ value, handleChangeValue, category, isSelected }: OptionButtonProps) => {
+const OptionButton = ({ value, handleChangeValue, category, isSelected, isFullWidth= false }: OptionButtonProps) => {
   // Function that handles the selection of an option
   const handleSelect = () => {
     // Calls handleChangeValue with the category and value of the selected option
@@ -16,10 +17,11 @@ const OptionButton = ({ value, handleChangeValue, category, isSelected }: Option
   };
 
   return (
-    // Use `$isSelected` to make it a transient prop and avoid console errors related to DOM
+    // Use `$isSelected` and $isFullWidth to make them a transient prop and avoid console errors related to DOM
     <OptionButtonContainer
       onClick={handleSelect}
       $isSelected={isSelected}
+      $isFullWidth={isFullWidth}
     >
       {value}
     </OptionButtonContainer>

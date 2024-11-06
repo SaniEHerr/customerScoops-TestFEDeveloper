@@ -1,8 +1,7 @@
 // styled.components.ts
 import styled from 'styled-components';
 
-export const OptionButtonContainer = styled.div<{ $isSelected: boolean }>`
-  /* padding          : 1rem 2rem; */
+export const OptionButtonContainer = styled.div<{ $isSelected: boolean; $isFullWidth: boolean }>`
   background-color : ${props => props.$isSelected ? 'var(--primary-color)' : ''};
   min-width        : 148px;
   min-height       : 39px;
@@ -17,4 +16,8 @@ export const OptionButtonContainer = styled.div<{ $isSelected: boolean }>`
   justify-content  : center;
   white-space      : nowrap;
   transition       : background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+
+  ${props => props.$isFullWidth && `
+    grid-column: span 2;
+  `}
 `;
