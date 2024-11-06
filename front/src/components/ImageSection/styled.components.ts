@@ -7,18 +7,13 @@ export const ImageSectionContainer = styled.section`
   justify-content : end;
   max-width       : 100%;
 
-  /* @media (min-width: 1023px) {
-    max-width       : 1024px;
-  } */
-
-
   .section-image {
     width      : 100%;
     height     : auto;
     max-width  : 364px;
     max-height : 213px;
 
-    @media (min-width: 1023px) {
+    @media (min-width: 1024px) {
       width      : 100%;
       height     : auto;
       max-width  : 635px;
