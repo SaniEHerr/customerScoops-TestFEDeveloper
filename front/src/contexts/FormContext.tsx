@@ -2,11 +2,11 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 // Interface for user response data, defining the expected shape of the form data
 export interface UserResponseData {
-  name      ?: string;
-  position  ?: string;
-  challenge ?: string;
-  crm       ?: string;
-  industry  ?: string;
+  name       : string;
+  position?  : string;
+  challenge? : string;
+  crm?       : string;
+  industry?  : string;
 }
 
 // Interface for the context properties, including user response and handler function
@@ -34,7 +34,13 @@ interface FormProviderProps {
 
 // FormProvider component that provides the context value to its children
 export const FormProvider: React.FC<FormProviderProps> = ({ children }) => {
-  const [userResponse, setUserResponse] = useState<UserResponseData>({});
+  const [userResponse, setUserResponse] = useState<UserResponseData>({
+    name: "",
+    position: "",
+    challenge: "",
+    crm: "",
+    industry: ""
+  });
 
   console.log(userResponse);
 
