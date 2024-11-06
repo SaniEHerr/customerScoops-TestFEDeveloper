@@ -6,6 +6,10 @@ export const ChallengesContainer = styled.section`
   flex-direction  : column;
   gap             : 1rem;
 
+  @media (min-width: 1023px) {
+    width : 400px;
+  }
+
   p {
     font-size   : 18px;
     font-weight : 300;

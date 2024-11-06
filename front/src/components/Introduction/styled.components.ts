@@ -16,7 +16,7 @@ export const IntroductionContainer = styled.section`
     line-height : 23.4px;
 
     @media (min-width: 1023px) {
-      font-size : 19px;
+      font-size   : 19px;
       line-height : 24.7px;
     }
   }

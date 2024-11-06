@@ -7,10 +7,8 @@ export const GoodbyeMessageContainer = styled.section`
   gap            : 2rem;
   min-width      : 304px;
 
-  p {
-    font-weight : 300;
-    font-size   : 20px;
-    font-style  : italic;
+  @media (min-width: 1023px) {
+    width : 400px;
   }
 
   .description-container {
@@ -24,7 +22,17 @@ export const GoodbyeMessageContainer = styled.section`
 
     p {
       font-style : normal;
+
+      @media (min-width: 1023px) {
+        font-size : 30px;
+      }
     }
+  }
+
+  p {
+    font-weight : 300;
+    font-size   : 20px;
+    font-style  : italic;
   }
 
   a {

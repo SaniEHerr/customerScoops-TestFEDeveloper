@@ -6,6 +6,10 @@ export const IndustryContainer = styled.section`
   flex-direction : column;
   gap            : 2rem;
 
+  @media (min-width: 1023px) {
+    width : 400px;
+  }
+
   .description-container {
     display        : flex;
     flex-direction : column;
@@ -29,7 +33,6 @@ export const IndustryContainer = styled.section`
     }
   }
 
-
   .industries-grid {
     display               : grid;
     grid-template-columns : repeat(2, 1fr);
@@ -38,7 +41,7 @@ export const IndustryContainer = styled.section`
 
     @media (min-width: 1023px) {
       grid-template-columns : repeat(3, 1fr);
-      width                 : 300px;
+      /* width                 : 300px; */
     }
   }
 `

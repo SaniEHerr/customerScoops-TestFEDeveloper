@@ -9,8 +9,10 @@
 
 @media (min-width: 1024px) {
   .content-wraper {
-    flex-direction : row-reverse;
-    gap            : 6rem;
-    padding-left   : 2rem;
+    flex-direction  : row-reverse;
+    justify-content : center;
+    align-items     : center;
+    gap             : 6rem;
+    padding-left    : 2rem;
   }
 }

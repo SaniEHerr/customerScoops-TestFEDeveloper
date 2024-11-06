@@ -6,6 +6,10 @@ export const CrmContainer = styled.section`
   flex-direction : column;
   gap            : 2rem;
 
+  @media (min-width: 1023px) {
+    width : 400px;
+  }
+
   p {
     font-size   : 18px;
     font-weight : 300;
