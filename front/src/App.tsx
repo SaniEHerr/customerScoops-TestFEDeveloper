@@ -3,6 +3,7 @@ import './App.css'
 import ImageSection from './components/ImageSection/ImageSection'
 import MultiStep from './components/MultiStep/MultiStep';
 import { FormProvider } from './contexts/FormContext';
+import ProgressBar from './components/ProgressBar/ProgressBar';
 
 const App = () => {
   // State for MultiStep form, ImageSection and Progress Bar
@@ -16,8 +17,11 @@ const App = () => {
   return (
     <FormProvider>
       <main>
-        <ImageSection step={step} />
-        <MultiStep handleChangeStep={handleChangeStep} step={step} />
+        <ProgressBar step={step} />
+        <div className='content-wraper'>
+          <ImageSection step={step} />
+          <MultiStep handleChangeStep={handleChangeStep} step={step} />
+        </div>
       </main>
     </FormProvider>
   )
