@@ -38,7 +38,7 @@ const ImageSection = ({ step }: ImageSectionProps) => {
         </>
       )}
 
-      <div>
+      <div className={`${step === 6 ? 'container-step6' : ''}`}>
         <span className="step">0{step || "01"}</span>
         <span className="line"></span>
         <span>06</span>

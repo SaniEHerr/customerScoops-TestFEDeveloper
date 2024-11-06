@@ -45,13 +45,32 @@ export const ImageSectionContainer = styled.section`
 
   div {
     position      : absolute;
-    top           : 15px;
-    right         : 15px;
+    top           : 7%;
+    right         : 3%;
     display       : flex;
     justify-items : center;
     align-items   : start;
     gap           : .5rem;
     color         : var(--primary-color);
+
+    @media (min-width: 1024px) {
+      top   : 12%;
+      right : 3%;
+    }
+
+    &.container-step6 {
+      @media (min-width: 1024px) {
+        top   : -3px;
+        right : 5%;
+      }
+    }
+
+    &.container-step6 {
+      @media (min-width: 1240px) {
+        top   : -3px;
+        right : 8.5%;
+      }
+    }
 
     .step {
       font-size   : 21px;
