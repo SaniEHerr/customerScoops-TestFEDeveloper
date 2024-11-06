@@ -7,6 +7,11 @@ export const PaginationContainer = styled.div`
   align-items     : center;
   width           : 100%;
 
+  @media (min-width: 1240px) {
+    margin-left : -47px;
+    gap         : .8rem;
+  }
+
   .next-button {
     width            : 100px;
     height           : 35px;
@@ -20,12 +25,34 @@ export const PaginationContainer = styled.div`
     justify-content  : center;
     white-space      : nowrap;
     border           : none;
-    /* transition       : background-color 0.3s ease, border 0.3s ease, color 0.3s ease; */
+    position         : relative;
+    cursor           : pointer;
+
+    @media (min-width: 1023px) {
+      width : 140px;
+    }
 
     &:disabled {
       background-color : #F4F4F4;
       color            : var(--primary-color);
       border           : 1px solid var(--primary-color);
+    }
+
+    svg {
+      width    : 20px;
+      height   : 20px;
+      display  : none;
+      position : absolute;
+      right    : 20px;
+
+
+      @media (min-width: 1023px) {
+        display : flex;
+      }
+    }
+
+    path {
+      stroke: #13847B;
     }
   }
 
@@ -35,6 +62,7 @@ export const PaginationContainer = styled.div`
     border-radius    : 100%;
     width            : 35px;
     height           : 35px;
+    cursor           : pointer;
 
     svg {
       width  : 20px;

@@ -34,6 +34,7 @@ export const ImageSectionContainer = styled.section`
     max-width  : 100px;
     max-height : 36.44px;
     min-width  : 50px;
+    display    : block;
 
     /* Small devices */
     @media (max-width: 330px) {

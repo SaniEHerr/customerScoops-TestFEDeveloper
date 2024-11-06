@@ -1,4 +1,5 @@
 import ArrowSmLeft from "../../assets/icons/ArrowSmLeft";
+import ArrowSmRight from "../../assets/icons/ArrowSmRight";
 import { useFormContext } from "../../contexts/FormContext";
 import { PaginationContainer } from "./styled.components";
 
@@ -49,6 +50,7 @@ const Pagination = ({ handleChangeStep, step }: PaginationProps) => {
               onClick={nextStep}
             >
               Siguiente
+              <ArrowSmRight />
             </button>
           </>
         )
