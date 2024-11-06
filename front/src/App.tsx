@@ -16,9 +16,10 @@ const App = () => {
 
   return (
     <FormProvider>
-      <main>
+      <main className={`${step === 6 ? 'bg' : ''}`}>
         <ProgressBar step={step} />
-        <div className='content-wraper'>
+
+        <div className={`content-wraper ${step === 6 ? 'content-wraper-step6' : ''}`}>
           <ImageSection step={step} />
           <MultiStep handleChangeStep={handleChangeStep} step={step} />
         </div>

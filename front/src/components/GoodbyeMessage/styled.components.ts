@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const GoodbyeMessageContainer = styled.section`
-  color          : var(--primary-color);
-  display        : flex;
-  flex-direction : column;
-  gap            : 2rem;
-  min-width      : 304px;
+  color                 : var(--primary-color);
+  display               : flex;
+  flex-direction        : column;
+  gap                   : 2rem;
+  min-width             : 304px;
 
   @media (min-width: 1024px) {
     width : 400px;

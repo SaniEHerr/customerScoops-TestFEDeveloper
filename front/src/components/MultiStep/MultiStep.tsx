@@ -34,7 +34,7 @@ const MultiStep = ({ handleChangeStep, step }: MultiStepProps) => {
   };
   
   return (
-    <section className="wrapper">
+    <section className= {`wrapper ${step === 6 ? 'wrapper-step6' : ""}`}>
       <img className='logo-image' src="/logoDesktop.png" alt="CustomerScoops Logo" />
 
       <div className="content-container">

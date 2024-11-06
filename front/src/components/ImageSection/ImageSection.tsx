@@ -7,23 +7,35 @@ interface ImageSectionProps {
 
 const ImageSection = ({ step }: ImageSectionProps) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
+  const [step6Image] = useState('/step6DesktopView.png');
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 1023);
-
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Precargar la imagen del paso 6
+  useEffect(() => {
+    const img = new Image();
+    img.src = step6Image;
+  }, [step6Image]);
 
   return (
     <ImageSectionContainer>
       {isMobile ? (
         <>
-          <img className="section-image" src="/sectionImgMobile.png" alt="CustomerScoops Logo" />
+          <img className="section-image-default" src="/sectionImgMobile.png" alt="CustomerScoops Logo" />
           <img className="logo-image" src="/logoMobile.png" alt="CustomerScoops Logo" />
         </>
       ) : (
-        <img className="section-image" src="/sectionImgDesktop.png" alt="CustomerScoops Logo" />
+        <>
+          {step === 6 ? (
+            <img className="section-image-step6" src={step6Image} alt="CustomerScoops Logo for Step 6" />
+          ) : (
+            <img className="section-image-default" src="/sectionImgDesktop.png" alt="CustomerScoops Logo Default" />
+          )}
+        </>
       )}
 
       <div>

@@ -61,6 +61,16 @@ html, body {
   }
 }
 
+@media (min-width: 1024px) {
+  .wrapper-step6 {
+    padding-inline : 0px;
+    padding-left   : 4.2rem;
+    margin-bottom  : 156px;
+    /* margin-right   : 9rem; */
+    /* margin-left    : 0rem; */
+  }
+}
+
 .content-container {
   display        : flex;
   flex-direction : column;

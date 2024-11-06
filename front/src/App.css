@@ -17,8 +17,43 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .content-wraper {
+    flex-direction  : row-reverse;
+    justify-content : center;
+    align-items     : center;
+    gap             : 3rem;
+    padding-left    : 2rem;
+  }
+}
+
 @media (min-width: 1240px) {
   .content-wraper {
     gap : 5rem;
+  }
+}
+
+.content-wraper-step6 {
+  margin-top: 0rem;
+}
+
+@media (min-width: 1024px) {
+  .content-wraper-step6 {
+    margin-top : 5rem;
+    gap        : 14rem;
+  }
+}
+
+.bg {
+  min-height            : 100vh;
+}
+
+@media (min-width: 1024px) {
+  .bg {
+    background            : rgb(1,204,188);
+    background            : linear-gradient(120deg, rgba(1,204,188,1) 0%, rgba(1,204,188,1) 60%, rgba(18,111,118,1) 100%);
+    background-repeat     : no-repeat;
+    background-size       : cover;
+    background-attachment : fixed;
   }
 }

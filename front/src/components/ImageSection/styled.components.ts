@@ -7,21 +7,7 @@ export const ImageSectionContainer = styled.section`
   justify-content : end;
   max-width       : 100%;
 
-  /* .section-image {
-    width      : 100%;
-    height     : auto;
-    max-width  : 364px;
-    max-height : 213px;
-
-    @media (min-width: 1024px) {
-      width      : 100%;
-      height     : auto;
-      max-width  : 635px;
-      max-height : 655px;
-    }
-  } */
-
-  .section-image {
+  .section-image-default {
     width      : 100%;
     height     : auto;
     max-width  : 100%;
@@ -37,6 +23,12 @@ export const ImageSectionContainer = styled.section`
       max-width    : 635px;
       margin-right : 0;
     }
+  }
+
+  .section-image-step6 {
+    width        : 100%;
+    max-width    : 435px;
+    margin-right : 7.5rem;
   }
 
   .logo-image {
@@ -82,24 +74,3 @@ export const ImageSectionContainer = styled.section`
     }
   }
 `
-
-
-  /* @media (min-width: 768px) {
-    .section-image {
-      max-width: 600px;
-    }
-
-    .logo-image {
-      max-width: 150px;
-    }
-  } */
-  
-  /* @media (min-width: 1024px) {
-    .section-image {
-      max-width: 700px;
-    }
-
-    .logo-image {
-      max-width: 180px;
-    }
-  } */
