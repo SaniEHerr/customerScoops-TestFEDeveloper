@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const UserPositionContainer = styled.section`
-  padding-inline : 2rem;
+  /* padding-inline : 2rem; */
   color          : var(--primary-color);
   display        : flex;
   flex-direction : column;

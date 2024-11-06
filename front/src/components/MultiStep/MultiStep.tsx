@@ -1,6 +1,7 @@
 import Introduction from "../Introduction/Introduction";
 import UserPosition from "../UserPosition/UserPosition";
 import Pagination from "../Pagination/Pagination";
+import Challenges from "../Challenges/Challenges";
 
 interface MultiStepProps {
   handleChangeStep : Function;
@@ -16,18 +17,18 @@ const MultiStep = ({ handleChangeStep, step }: MultiStepProps) => {
         return <Introduction handleChangeStep={handleChangeStep} />;
       case 2:
         return <UserPosition />
-      // case 3:
-        // return <Step3 />;
+      case 3:
+        return <Challenges />;
       // default:
         // return <Step1 />;
     }
   };
   
   return (
-    <>
+    <section className="wrapper">
       {renderStepContent()}
       <Pagination step={step} handleChangeStep={handleChangeStep} />
-    </>
+    </section>
   )
 }
 

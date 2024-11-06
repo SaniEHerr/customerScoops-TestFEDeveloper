@@ -5,7 +5,6 @@ export const PaginationContainer = styled.div`
   gap             : .5rem;
   justify-content : start;
   align-items     : center;
-  padding-inline  : 2rem;
   width: 100%;
 
   .next-button {
