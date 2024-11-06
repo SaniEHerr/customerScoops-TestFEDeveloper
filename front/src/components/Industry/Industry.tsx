@@ -51,8 +51,8 @@ const Industry = () => {
         <OptionButton
           category="industry"
           handleChangeValue={handleResponse}
-          value=" Producción /Fabricación"
-          isSelected={userResponse.industry === " Producción / Fabricación"}
+          value="Producción / Fabricación"
+          isSelected={userResponse.industry === "Producción / Fabricación"}
         />
 
         <OptionButton
