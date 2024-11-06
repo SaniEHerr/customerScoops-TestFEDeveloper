@@ -17,8 +17,8 @@ const UserPosition = () => {
 
       <div className="positions-grid">
         <OptionButton 
-          category="position" 
-          handleChangeValue={handleResponse} 
+          category="position"
+          handleChangeValue={handleResponse}
           value="Board member" 
           isSelected={userResponse.position === "Board member"}
         />
