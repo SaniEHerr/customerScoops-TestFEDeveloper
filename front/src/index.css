@@ -48,6 +48,19 @@ html, body {
   }
 }
 
+@media (min-width: 1024px) {
+  .wrapper {
+    padding-inline : 2rem;
+    margin-top     : 5px;
+  }
+}
+
+@media (min-width: 1240px) {
+  .wrapper {
+    margin-bottom: 76px;
+  }
+}
+
 .content-container {
   display        : flex;
   flex-direction : column;

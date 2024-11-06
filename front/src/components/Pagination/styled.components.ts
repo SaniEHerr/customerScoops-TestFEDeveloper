@@ -7,9 +7,9 @@ export const PaginationContainer = styled.div`
   align-items     : center;
   width           : 100%;
 
-  @media (min-width: 1240px) {
-    margin-left : -47px;
-    gap         : .8rem;
+  @media (min-width: 1024px) {
+    margin-left    : -47px;
+    gap            : .8rem;
   }
 
   .next-button {

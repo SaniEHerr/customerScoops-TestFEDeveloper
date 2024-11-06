@@ -7,7 +7,7 @@ export const ImageSectionContainer = styled.section`
   justify-content : end;
   max-width       : 100%;
 
-  .section-image {
+  /* .section-image {
     width      : 100%;
     height     : auto;
     max-width  : 364px;
@@ -19,26 +19,36 @@ export const ImageSectionContainer = styled.section`
       max-width  : 635px;
       max-height : 655px;
     }
+  } */
+
+  .section-image {
+    width      : 100%;
+    height     : auto;
+    max-width  : 100%;
+    max-height : auto;
+
+    @media (max-width: 1023px) {
+      align-self   : flex-start;
+      margin-right : -10px;
+    }
+
+    @media (min-width: 1024px) {
+      width        : 100%;
+      max-width    : 635px;
+      margin-right : 0;
+    }
   }
 
   .logo-image {
     position   : absolute;
-    right      : 220px;
     width      : 100%;
     height     : auto;
     max-width  : 100px;
     max-height : 36.44px;
     min-width  : 50px;
     display    : block;
-
-    /* Small devices */
-    @media (max-width: 330px) {
-      right : 200px;
-    }
-
-    @media (min-width: 1023px) {
-      display: none;
-    }
+    left       : 15%;
+    top        : 45%;
   }
 
   div {
