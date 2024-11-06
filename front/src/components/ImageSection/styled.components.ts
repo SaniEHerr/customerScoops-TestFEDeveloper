@@ -5,10 +5,28 @@ export const ImageSectionContainer = styled.section`
   align-items     : center;
   position        : relative;
   justify-content : end;
+  width           : 100%;
 
   .section-image {
-    position : absolute;
-    right    : 220px;
+    width      : 100%;
+    height     : auto;
+    max-width  : 364px;
+    max-height : 213px;
+  }
+
+  .logo-image {
+    position   : absolute;
+    right      : 220px;
+    width      : 100%;
+    height     : auto;
+    max-width  : 100px;
+    max-height : 36.44px;
+    min-width  : 50px;
+
+    /* Small devices */
+    @media (max-width: 330px) {
+      right : 200px;
+    }
   }
 
   div {
@@ -41,4 +59,25 @@ export const ImageSectionContainer = styled.section`
       font-weight : 400;
     }
   }
+
+
+  /* @media (min-width: 768px) {
+    .section-image {
+      max-width: 600px;
+    }
+
+    .logo-image {
+      max-width: 150px;
+    }
+  } */
+  
+  /* @media (min-width: 1024px) {
+    .section-image {
+      max-width: 700px;
+    }
+
+    .logo-image {
+      max-width: 180px;
+    }
+  } */
 `
