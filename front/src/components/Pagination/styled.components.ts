@@ -5,7 +5,7 @@ export const PaginationContainer = styled.div`
   gap             : .5rem;
   justify-content : start;
   align-items     : center;
-  width: 100%;
+  width           : 100%;
 
   .next-button {
     width            : 100px;
@@ -20,6 +20,13 @@ export const PaginationContainer = styled.div`
     justify-content  : center;
     white-space      : nowrap;
     border           : none;
+    /* transition       : background-color 0.3s ease, border 0.3s ease, color 0.3s ease; */
+
+    &:disabled {
+      background-color : #F4F4F4;
+      color            : var(--primary-color);
+      border           : 1px solid var(--primary-color);
+    }
   }
 
   .prev-button {

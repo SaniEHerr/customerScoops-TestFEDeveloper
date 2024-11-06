@@ -72,7 +72,6 @@ const UserPosition = () => {
           isSelected={userResponse.position === "Otro"}
         />
       </div>
-
     </UserPositionContainer>
   )
 }
