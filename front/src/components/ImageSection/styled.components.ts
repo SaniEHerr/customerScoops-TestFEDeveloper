@@ -13,15 +13,64 @@ export const ImageSectionContainer = styled.section`
     max-width  : 100%;
     max-height : auto;
 
-    @media (max-width: 1023px) {
-      align-self   : flex-start;
-      margin-right : -10px;
+    @media (min-width: 320px) {
+      width  : 320px;
+      height : 186px;
+    }
+
+    @media (min-width: 360px) {
+      width  : 360px;
+      height : 204px;
+    }
+
+    @media (min-width: 380px) {
+      width  : 381px;
+      height : 204px;
+    }
+
+    @media (min-width: 420px) {
+      width  : 420px;
+      height : 245px;
+    }
+    
+    @media (min-width: 480px) {
+      width  : 480px;
+      height : 280px;
+    }
+
+    @media (min-width: 540px) {
+      width  : 540px;
+      height : 315px;
+    }
+
+    @media (min-width: 640px) {
+      width  : 640px;
+      height : 373px;
+    }
+
+    @media (min-width: 768px) {
+      width  : 768px;
+      height : 420px;
     }
 
     @media (min-width: 1024px) {
-      width        : 100%;
-      max-width    : 635px;
-      margin-right : 0;
+      width        : 480px;
+      height       : 495px;
+    }
+
+    @media (min-width: 1080px) {
+      width  : 536px;
+      height : 552px;
+    }
+
+    @media (min-width: 1240px) {
+      width  : 635px;
+      height : 655px;
+    }
+
+    @media (max-width: 1023px) {
+      align-self   : flex-start;
+      margin-right : -10px;
     }
   }
 

@@ -143,5 +143,5 @@ html, body {
   display        : flex;
   flex-direction : column;
   gap            : 2rem;
-  animation : fadeOut 0.3s ease-in-out forwards;
+  animation      : fadeOut 0.3s ease-in-out forwards;
 }

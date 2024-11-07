@@ -7,7 +7,6 @@ interface ImageSectionProps {
 
 const ImageSection = ({ step }: ImageSectionProps) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
-  const [step6Image] = useState('/step6DesktopView.png');
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 1023);
@@ -15,25 +14,39 @@ const ImageSection = ({ step }: ImageSectionProps) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Preload Step6 image
-  useEffect(() => {
-    const img = new Image();
-    img.src = step6Image;
-  }, [step6Image]);
-
   return (
     <ImageSectionContainer>
       {isMobile ? (
         <>
-          <img className="section-image-default" src="/sectionImgMobile.png" alt="CustomerScoops Logo" />
-          <img className="logo-image" src="/logoMobile.png" alt="CustomerScoops Logo" />
+          <img
+            className="section-image-default"
+            src="/sectionImgMobile.png"
+            alt="CustomerScoops Logo"
+            loading="lazy"
+          />
+          <img 
+            className="logo-image" 
+            src="/logoMobile.png" 
+            alt="CustomerScoops Logo"
+            loading="lazy"
+          />
         </>
       ) : (
         <>
           {step === 6 ? (
-            <img className="section-image-step6" src={step6Image} alt="CustomerScoops Logo for Step 6" />
+            <img
+              className="section-image-step6"
+              src="/step6DesktopView.png"
+              alt="CustomerScoops Logo for Step 6"
+              loading="lazy"
+            />
           ) : (
-            <img className="section-image-default" src="/sectionImgDesktop.png" alt="CustomerScoops Logo Default" />
+            <img 
+              className="section-image-default"
+              src="/sectionImgDesktop.png" 
+              alt="CustomerScoops Logo Default"
+              loading="lazy"
+            />
           )}
         </>
       )}
