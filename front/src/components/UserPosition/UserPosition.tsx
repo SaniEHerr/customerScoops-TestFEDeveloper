@@ -1,18 +1,7 @@
+import { positions } from "../../constants/positions";
 import { useFormContext } from "../../contexts/FormContext";
 import OptionButton from "../OptionButton/OptionButton";
 import { UserPositionContainer } from "./styled.components";
-
-// List of positions to be displayed as options
-const positions = [
-  "Board member",
-  "C-level",
-  "Gerente",
-  "Subgerente",
-  "Jefe área",
-  "Lider de área",
-  "Ejecutivo / Analista",
-  "Otro",
-];
 
 const UserPosition = () => {
   const { userResponse, handleResponse } = useFormContext();
