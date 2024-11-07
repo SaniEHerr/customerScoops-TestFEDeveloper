@@ -15,7 +15,7 @@ const ImageSection = ({ step }: ImageSectionProps) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Precargar la imagen del paso 6
+  // Preload Step6 image
   useEffect(() => {
     const img = new Image();
     img.src = step6Image;

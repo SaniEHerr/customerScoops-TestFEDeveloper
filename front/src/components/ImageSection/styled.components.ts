@@ -29,6 +29,17 @@ export const ImageSectionContainer = styled.section`
     width        : 100%;
     max-width    : 435px;
     margin-right : 7.5rem;
+    opacity      : 0;
+    animation    : fadeIn 1.5s forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity : 0;
+    }
+    to {
+      opacity : 1;
+    }
   }
 
   .logo-image {
@@ -92,4 +103,4 @@ export const ImageSectionContainer = styled.section`
       font-weight : 400;
     }
   }
-`
+`;

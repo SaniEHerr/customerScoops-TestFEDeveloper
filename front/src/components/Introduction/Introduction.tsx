@@ -33,28 +33,28 @@ const Introduction = ({ handleChangeStep }: IntroductionProps) => {
   };
 
   return (
-    <IntroductionContainer>
-      <p>
-        Muchas gracias por tu interés en conocer <span>customerScoops</span>, que a través de Formularios Conversacionales Inteligente te ayudamos a aumentar el revenue y rentabilidad de tu negocio.
-      </p>
+      <IntroductionContainer>
+        <p>
+          Muchas gracias por tu interés en conocer <span>customerScoops</span>, que a través de Formularios Conversacionales Inteligente te ayudamos a aumentar el revenue y rentabilidad de tu negocio.
+        </p>
 
-      <p>
-        Queremos conocerte, ¿cuál es tu nombre?
-      </p>
-      
-      <form onSubmit={handleSubmit}>
-        <div className='input-container'>
-          <input
-            onChange={(e) => setInputName(e.target.value)} 
-            value={inputName} 
-            placeholder='Nombre' 
-          />
-          {error && <p>{error}</p>}
-        </div>
+        <p>
+          Queremos conocerte, ¿cuál es tu nombre?
+        </p>
         
-        <button type="submit">Comenzar</button>
-      </form>
-    </IntroductionContainer>
+        <form onSubmit={handleSubmit}>
+          <div className='input-container'>
+            <input
+              onChange={(e) => setInputName(e.target.value)} 
+              value={inputName} 
+              placeholder='Nombre' 
+            />
+            {error && <p>{error}</p>}
+          </div>
+          
+          <button type="submit">Comenzar</button>
+        </form>
+      </IntroductionContainer>
   )
 }
 
