@@ -3,7 +3,7 @@ import { OptionsContainer } from "../styled.components";
 interface ChallengesOptionProps {
   letter            : string;
   description       : string;
-  handleChangeValue : Function;
+  handleChangeValue : (category: string, description: string) => void;
   category          : string;
   isSelected        : boolean;
 }

@@ -4,7 +4,7 @@ import { useFormContext } from '../../contexts/FormContext';
 import { validateName } from '../../validator/validateName';
 
 interface IntroductionProps {
-  handleChangeStep : Function;
+  handleChangeStep: (stepNumber: number) => void;
 }
 
 const Introduction = ({ handleChangeStep }: IntroductionProps) => {

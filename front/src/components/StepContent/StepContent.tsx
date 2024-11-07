@@ -7,8 +7,8 @@ import GoodbyeMessage from "../GoodbyeMessage/GoodbyeMessage";
 import { useMemo } from "react";
 
 interface StepContentProps {
-  handleChangeStep: (stepNumber: number) => void;
-  step: number;
+  handleChangeStep : (stepNumber: number) => void;
+  step             : number;
 }
 
 const StepContent = ({ handleChangeStep, step }: StepContentProps) => {

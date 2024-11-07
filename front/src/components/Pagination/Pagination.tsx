@@ -4,7 +4,7 @@ import { useFormContext } from "../../contexts/FormContext";
 import { PaginationContainer } from "./styled.components";
 
 interface PaginationProps {
-  handleChangeStep  : Function;
+  handleChangeStep: (stepNumber: number) => void;
   step              : number;
 }
 
