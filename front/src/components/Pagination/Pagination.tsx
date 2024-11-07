@@ -20,14 +20,12 @@ const Pagination = ({ handleChangeStep, step }: PaginationProps) => {
 
   // Function to handle moving to the previous step
   const prevStep = () => {
-    if (step === 1) return;
-    handleChangeStep(step - 1);
+    if (step > 1) handleChangeStep(step - 1);
   };
 
   // Function to handle moving to the next step
   const nextStep = () => {
-    if (step === 6 || !isNextEnabled) return;
-    handleChangeStep(step + 1);
+    if (step < 6 && isNextEnabled) handleChangeStep(step + 1);
   };
 
   return (
