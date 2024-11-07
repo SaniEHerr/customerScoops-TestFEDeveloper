@@ -42,7 +42,7 @@ export const OptionsContainer = styled.div<{ $isSelected: boolean }>`
   text-align       : start;
   background-color : ${props => props.$isSelected ? 'var(--primary-color)' : ''};
   border           : 1px solid ${props => props.$isSelected ? 'transparent' : 'var(--primary-color)'};
-  color            : ${props => props.$isSelected ? '#F4F4F4' : ''};
+  color            : ${props => props.$isSelected ? 'var(--white-color)' : ''};
   transition       : background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
 
   @media (min-width: 1024px) {
@@ -53,8 +53,8 @@ export const OptionsContainer = styled.div<{ $isSelected: boolean }>`
   }
 
   span {
-    background-color : #00ccbc;
-    color            : #f4f4f4;
+    background-color : var(--secondary-color);
+    color            : var(--white-color);
     min-width        : 50.83px;
     min-height       : 30px;
     border-radius    : 2rem;

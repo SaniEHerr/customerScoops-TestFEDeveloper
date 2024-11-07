@@ -19,7 +19,7 @@ export const PaginationContainer = styled.div`
     border-radius    : 2rem;
     font-size        : 11px;
     background-color : var(--primary-color);
-    color            : #F4F4F4;
+    color            : var(--white-color);
     display          : flex;
     align-items      : center;
     justify-content  : center;
@@ -33,7 +33,7 @@ export const PaginationContainer = styled.div`
     }
 
     &:disabled {
-      background-color : #F4F4F4;
+      background-color : var(--white-color);
       color            : var(--primary-color);
       border           : 1px solid var(--primary-color);
     }
@@ -57,7 +57,7 @@ export const PaginationContainer = styled.div`
 
   .prev-button {
     border           : 1px solid var(--primary-color);
-    background-color : #F4F4F4;
+    background-color : var(--white-color);
     border-radius    : 100%;
     width            : 35px;
     height           : 35px;

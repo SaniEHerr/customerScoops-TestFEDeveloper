@@ -70,7 +70,7 @@ export const IntroductionContainer = styled.section`
       border-radius    : 2rem;
       font-size        : 11px;
       background-color : var(--primary-color);
-      color            : #F4F4F4;
+      color            : var(--white-color);
       display          : flex;
       align-items      : center;
       justify-content  : center;

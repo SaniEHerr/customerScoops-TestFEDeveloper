@@ -6,7 +6,9 @@
 
 /* Variables */
 :root {
-  --primary-color: #231331;
+  --primary-color   : #231331;
+  --secondary-color : #00ccbc;
+  --white-color     : #F4F4F4;
 }
 
 /* Global Styles */
@@ -18,7 +20,7 @@
 }
 
 html, body {
-  background-color : #F4F4F4;
+  background-color : var(--white-color);
 }
 
 .wrapper {

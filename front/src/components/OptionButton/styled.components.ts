@@ -6,7 +6,7 @@ export const OptionButtonContainer = styled.div<{ $isSelected: boolean; $isFullW
   min-height       : 39px;
   border-radius    : 2rem;
   border           : 1px solid ${props => props.$isSelected ? 'transparent' : 'var(--primary-color)'};
-  color            : ${props => props.$isSelected ? '#F4F4F4' : ''};
+  color            : ${props => props.$isSelected ? 'var(--white-color)' : ''};
   cursor           : pointer;
   font-size        : 11px;
   text-align       : center;
