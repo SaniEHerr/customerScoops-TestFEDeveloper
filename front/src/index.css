@@ -109,33 +109,33 @@ html, body {
 /* Animation for entrance */
 @keyframes fadeIn {
   0% {
-    opacity: 0;
-    transform: translateX(-20px);
+    opacity   : 0;
+    transform : translateX(-20px);
   }
   100% {
-    opacity: 1;
-    transform: translateX(0);
+    opacity   : 1;
+    transform : translateX(0);
   }
 }
 
 /* Animation for output from right to left */
 @keyframes fadeOut {
   0% {
-    opacity: 1;
-    transform: translateX(0);
+    opacity   : 1;
+    transform : translateX(0);
   }
   100% {
-    opacity: 0;
-    transform: translateX(20px);
+    opacity   : 0;
+    transform : translateX(20px);
   }
 }
 
 .step-content {
-  opacity: 0;
-  transform: translateX(0px);
-  animation: fadeIn 0.3s ease-in-out forwards;
+  opacity   : 0;
+  transform : translateX(0px);
+  animation : fadeIn 0.3s ease-in-out forwards;
 }
 
 .step-exit {
-  animation: fadeOut 0.3s ease-in-out forwards;
+  animation : fadeOut 0.3s ease-in-out forwards;
 }
