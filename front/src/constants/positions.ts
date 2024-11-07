@@ -1,5 +1,5 @@
 // List of positions to be displayed as options
-export const positions: string[] = [
+export const positions = [
   "Board member",
   "C-level",
   "Gerente",
@@ -8,4 +8,4 @@ export const positions: string[] = [
   "Lider de área",
   "Ejecutivo / Analista",
   "Otro",
-];
+] as const;
