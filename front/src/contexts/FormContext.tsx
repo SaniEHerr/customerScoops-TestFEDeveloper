@@ -42,8 +42,6 @@ export const FormProvider: React.FC<FormProviderProps> = ({ children }) => {
     industry: ""
   });
 
-  console.log(userResponse);
-
   // Function to handle updating the user response based on the category and value
   const handleResponse = (category: keyof UserResponseData, value: string) => {
     setUserResponse((prevResponses) => ({
