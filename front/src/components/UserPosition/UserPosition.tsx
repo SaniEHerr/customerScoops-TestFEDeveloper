@@ -1,10 +1,22 @@
 import { useFormContext } from "../../contexts/FormContext";
-import OptionButton from "../OptionButton/OptionButton"
+import OptionButton from "../OptionButton/OptionButton";
 import { UserPositionContainer } from "./styled.components";
+
+// List of positions to be displayed as options
+const positions = [
+  "Board member",
+  "C-level",
+  "Gerente",
+  "Subgerente",
+  "Jefe área",
+  "Lider de área",
+  "Ejecutivo / Analista",
+  "Otro",
+];
 
 const UserPosition = () => {
   const { userResponse, handleResponse } = useFormContext();
-  
+
   return (
     <UserPositionContainer>
       <p>
@@ -16,64 +28,19 @@ const UserPosition = () => {
       </p>
 
       <div className="positions-grid">
-        <OptionButton 
-          category="position"
-          handleChangeValue={handleResponse}
-          value="Board member" 
-          isSelected={userResponse.position === "Board member"}
-        />
-
-        <OptionButton 
-          category="position" 
-          handleChangeValue={handleResponse} 
-          value="C-level" 
-          isSelected={userResponse.position === "C-level"}
-        />
-
-        <OptionButton 
-          category="position" 
-          handleChangeValue={handleResponse} 
-          value="Gerente" 
-          isSelected={userResponse.position === "Gerente"}
-        />
-
-        <OptionButton 
-          category="position" 
-          handleChangeValue={handleResponse} 
-          value="Subgerente" 
-          isSelected={userResponse.position === "Subgerente"}
-        />
-
-        <OptionButton 
-          category="position" 
-          handleChangeValue={handleResponse} 
-          value="Jefe área" 
-          isSelected={userResponse.position === "Jefe área"}
-        />
-
-        <OptionButton 
-          category="position" 
-          handleChangeValue={handleResponse} 
-          value="Lider de área" 
-          isSelected={userResponse.position === "Lider de área"}
-        />
-
-        <OptionButton 
-          category="position" 
-          handleChangeValue={handleResponse} 
-          value="Ejecutivo / Analista" 
-          isSelected={userResponse.position === "Ejecutivo / Analista"}
-        />
-
-        <OptionButton 
-          category="position" 
-          handleChangeValue={handleResponse} 
-          value="Otro" 
-          isSelected={userResponse.position === "Otro"}
-        />
+        {/* Mapping through the positions array to create an OptionButton for each position */}
+        {positions.map((position) => (
+          <OptionButton
+            key={position}
+            category="position"
+            handleChangeValue={handleResponse}
+            value={position}
+            isSelected={userResponse.position === position}
+          />
+        ))}
       </div>
     </UserPositionContainer>
-  )
-}
+  );
+};
 
-export default UserPosition
+export default UserPosition;
