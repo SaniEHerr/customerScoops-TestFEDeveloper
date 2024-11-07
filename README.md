@@ -26,6 +26,7 @@ Este proyecto es una aplicación construida con **React + Vite**. Incluye una in
 ## Tecnologias y Dependencias
 
 - **React** `18.3.1`
+- **Vite** `5.4.10`
 - **TypeScript** `5.6.2`
 - **StyledComponents** `6.1.13`
 - **Node** `20.11.1`
