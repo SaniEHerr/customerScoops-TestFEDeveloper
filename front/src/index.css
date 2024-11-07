@@ -107,42 +107,18 @@ html, body {
 
 
 /**** MultiStep Animation ****/
-/* Animation for entrance */
-@keyframes fadeIn {
-  0% {
-    opacity   : 0;
-    transform : translateX(-20px);
-  }
-  100% {
-    opacity   : 1;
-    transform : translateX(0);
-  }
+
+.step-content,
+.pagination {
+  transition: opacity 0.3s ease;
 }
 
-/* Animation for output from right to left */
-@keyframes fadeOut {
-  0% {
-    opacity   : 1;
-    transform : translateX(0);
-  }
-  100% {
-    opacity   : 0;
-    transform : translateX(20px);
-  }
+.step-content.exit,
+.pagination.exit {
+  opacity: 0;
 }
 
-.step-content {
-  display        : flex;
-  flex-direction : column;
-  gap            : 2rem;
-  opacity        : 0;
-  transform      : translateX(0px);
-  animation      : fadeIn 0.3s ease-in-out forwards;
-}
-
-.step-exit {
-  display        : flex;
-  flex-direction : column;
-  gap            : 2rem;
-  animation      : fadeOut 0.3s ease-in-out forwards;
+.step-content.enter,
+.pagination.enter {
+  opacity: 1;
 }

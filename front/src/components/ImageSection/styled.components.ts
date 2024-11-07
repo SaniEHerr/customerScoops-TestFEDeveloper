@@ -81,7 +81,7 @@ export const ImageSectionContainer = styled.section`
     max-width    : 435px;
     margin-right : 7.5rem;
     opacity      : 0;
-    animation    : fadeIn 1.5s forwards;
+    animation    : fadeIn .7s ease-in-out forwards;
   }
 
   @keyframes fadeIn {
