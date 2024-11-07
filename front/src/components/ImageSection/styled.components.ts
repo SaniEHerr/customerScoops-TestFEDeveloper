@@ -13,6 +13,8 @@ export const ImageSectionContainer = styled.section`
     max-width  : 100%;
     max-height : auto;
 
+    /** to avoid jumps in the layout **/
+    
     @media (min-width: 320px) {
       width  : 320px;
       height : 186px;

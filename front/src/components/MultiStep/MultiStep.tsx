@@ -10,6 +10,7 @@ interface MultiStepProps {
 const MultiStep = ({ handleChangeStep, step }: MultiStepProps) => {
   const [animationClass, setAnimationClass] = useState("step-content");
 
+  // Effect that activates when the step changes, managing the exit and entry animation
   useEffect(() => {
     setAnimationClass("step-exit");
 

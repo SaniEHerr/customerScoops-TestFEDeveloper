@@ -1,4 +1,3 @@
-// styled.components.ts
 import styled from 'styled-components';
 
 export const OptionButtonContainer = styled.div<{ $isSelected: boolean; $isFullWidth: boolean }>`
@@ -18,14 +17,13 @@ export const OptionButtonContainer = styled.div<{ $isSelected: boolean; $isFullW
   transition       : background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
 
   ${props => props.$isFullWidth && `
-    grid-column: span 2;
+    grid-column : span 2;
   `}
 
   @media (min-width: 1024px) {
     min-width      : 125.65px;
     min-height     : 39px;
     white-space    : normal;
-    /* word-wrap      : break-word; */
     padding-inline : 10px;
 
     /* Remove full-width setting on larger screens */
