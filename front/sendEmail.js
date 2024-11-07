@@ -7,8 +7,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function sendEmail() {
 const emailData = {
-  from: `${process.env.RESEND_FROM_EMAIL_DEFAULT || "Acme <onboarding@resend.dev>"}`,
-  to: 'santiagoeherrera@gmail.com',
+  from: `${process.env.RESEND_FROM_EMAIL_DEFAULT}`,
+  to: 'anthony@customerscoops.com',
   subject: 'Santiago Herrera - Mail enviado con Resend',
   html: `
     <div style="max-width: 800px; font-family: Arial, sans-serif; color: #231331; font-size: 20px; margin: 0 auto">
