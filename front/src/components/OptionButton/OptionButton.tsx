@@ -12,7 +12,6 @@ interface OptionButtonProps {
 const OptionButton = ({ value, handleChangeValue, category, isSelected, isFullWidth= false }: OptionButtonProps) => {
   // Function that handles the selection of an option
   const handleSelect = () => {
-    // Calls handleChangeValue with the category and value of the selected option
     handleChangeValue(category, value);
   };
 

@@ -6,7 +6,6 @@ import Crm from "../Crm/Crm";
 import Industry from "../Industry/Industry";
 import GoodbyeMessage from "../GoodbyeMessage/GoodbyeMessage";
 import { useEffect, useState } from "react";
-// import { useEffect, useState } from "react";
 
 interface MultiStepProps {
   handleChangeStep : Function;
@@ -17,13 +16,11 @@ const MultiStep = ({ handleChangeStep, step }: MultiStepProps) => {
   const [animationClass, setAnimationClass] = useState("step-content");
 
   useEffect(() => {
-    // Añadir la clase 'step-exit' cuando se está saliendo de un paso
     setAnimationClass("step-exit");
     
     const timer = setTimeout(() => {
-      // Cambiar la clase a 'step-content' después de la animación de salida
       setAnimationClass("step-content");
-    }, 500); // El tiempo debe coincidir con la duración de la animación de salida
+    }, 500);
 
     return () => clearTimeout(timer);
   }, [step]);
@@ -32,19 +29,19 @@ const MultiStep = ({ handleChangeStep, step }: MultiStepProps) => {
   const renderStepContent = () => {
     switch (step) {
       case 1:
-        return <Introduction  handleChangeStep={handleChangeStep} />;
+        return <Introduction handleChangeStep={handleChangeStep} />;
       case 2:
-        return <UserPosition  />;
+        return <UserPosition />;
       case 3:
-        return <Challenges  />;
+        return <Challenges />;
       case 4:
-        return <Crm  />;
+        return <Crm />;
       case 5:
-        return <Industry  />;
+        return <Industry />;
       case 6:
-        return <GoodbyeMessage  />;
+        return <GoodbyeMessage />;
       default:
-        return <Introduction  handleChangeStep={handleChangeStep} />;
+        return <Introduction handleChangeStep={handleChangeStep} />;
     }
   }
   
@@ -54,8 +51,7 @@ const MultiStep = ({ handleChangeStep, step }: MultiStepProps) => {
         <img className='logo-image' src="/logoDesktop.png" alt="CustomerScoops Logo" />
 
         <div className="content-container">
-            {renderStepContent()}
-          
+          {renderStepContent()}
           <Pagination step={step} handleChangeStep={handleChangeStep} />
         </div>
       </div>
