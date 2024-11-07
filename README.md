@@ -63,7 +63,7 @@ Este proyecto es una aplicación construida con **React + Vite**. Incluye una in
 La maquetación del proyecto fue desarrollada con Styled Components y CSS puro para lograr un diseño modular y escalable.
 - **Styled Components:** Se utilizaron para manejar los estilos específicos de componentes, lo que permite encapsular los estilos y hacerlos más reutilizables.
 
-- **CSS puro:** Algunos estilos globales, variables y personalizaciones específicas de la interfaz fueron realizados con CSS puro para asegurar una rápida carga y flexibilidad en la personalización visual. A su vez se integran animaciones utilizando CSS puro para su facil integración
+- **CSS puro:** Algunos estilos globales, variables y personalizaciones específicas de la interfaz fueron realizados con CSS puro para asegurar una rápida carga y flexibilidad en la personalización visual. A su vez se integran animaciones utilizando CSS puro para su facil integración en ciertos archivos.
 
 ## Configuración del Envío de Correos
 
