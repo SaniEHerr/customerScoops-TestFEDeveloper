@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { IntroductionContainer } from './styled.components'
 import { useFormContext } from '../../contexts/FormContext';
+import { validateName } from '../../validator/validateName';
 
 interface IntroductionProps {
   handleChangeStep : Function;
@@ -8,23 +9,16 @@ interface IntroductionProps {
 
 const Introduction = ({ handleChangeStep }: IntroductionProps) => {
   const { userResponse, handleResponse } = useFormContext();
-
-  // Local state to manage the input for the user's name
   const [inputName, setInputName] = useState(userResponse.name || "");
-
-  // State to manage error message
   const [error, setError] = useState("");
   
-  // Function to handle form submission, validate name length, and move to the next step
+  // Function to handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!inputName.trim()) {
-      setError("Por favor, ingrese su nombre para continuar");
-    } else if (inputName.length < 3) {
-      setError("El nombre debe tener al menos 3 caracteres");
-    } else if (inputName.length > 16) {
-      setError("El nombre no puede exceder los 16 caracteres");
+    const errorMessage = validateName(inputName);
+    if (errorMessage) {
+      setError(errorMessage);
     } else {
       setError("");
       handleResponse("name", inputName);

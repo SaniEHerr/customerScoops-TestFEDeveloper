@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <FormProvider>
-      <main className={`${step === 6 ? 'bg' : ''}`}>
+      <main className={`${step === 6 ? 'background-step6' : ''}`}>
         <ProgressBar step={step} />
 
         <div className={`content-wraper ${step === 6 ? 'content-wraper-step6' : ''}`}>

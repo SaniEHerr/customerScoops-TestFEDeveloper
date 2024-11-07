@@ -44,12 +44,12 @@
   }
 }
 
-.bg {
-  min-height            : 100vh;
+.background-step6 {
+  min-height : 100vh;
 }
 
 @media (min-width: 1024px) {
-  .bg {
+  .background-step6 {
     background            : rgb(1,204,188);
     background            : linear-gradient(120deg, rgba(1,204,188,1) 0%, rgba(1,204,188,1) 60%, rgba(18,111,118,1) 100%);
     background-repeat     : no-repeat;

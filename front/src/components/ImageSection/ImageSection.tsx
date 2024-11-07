@@ -9,8 +9,11 @@ const ImageSection = ({ step }: ImageSectionProps) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1023);
 
   useEffect(() => {
+    // Function to handle window resizing.
     const handleResize = () => setIsMobile(window.innerWidth <= 1023);
     window.addEventListener('resize', handleResize);
+    
+    // Clear event listener and timeout when component is unmounted
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 

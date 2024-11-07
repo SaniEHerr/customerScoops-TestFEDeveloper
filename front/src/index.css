@@ -66,8 +66,6 @@ html, body {
     padding-inline : 0px;
     padding-left   : 4.2rem;
     margin-bottom  : 156px;
-    /* margin-right   : 9rem; */
-    /* margin-left    : 0rem; */
   }
 }
 
@@ -106,6 +104,9 @@ html, body {
   }
 }
 
+
+
+/**** MultiStep Animation ****/
 /* Animation for entrance */
 @keyframes fadeIn {
   0% {
