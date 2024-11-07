@@ -50,15 +50,15 @@ const MultiStep = ({ handleChangeStep, step }: MultiStepProps) => {
   
   return (
     <section className= {`wrapper ${step === 6 ? 'wrapper-step6' : ""}`}>
-        <div className={animationClass}>
-      <img className='logo-image' src="/logoDesktop.png" alt="CustomerScoops Logo" />
+      <div className={animationClass}>
+        <img className='logo-image' src="/logoDesktop.png" alt="CustomerScoops Logo" />
 
-      <div className="content-container">
-          {renderStepContent()}
-        
-        <Pagination step={step} handleChangeStep={handleChangeStep} />
-      </div>
+        <div className="content-container">
+            {renderStepContent()}
+          
+          <Pagination step={step} handleChangeStep={handleChangeStep} />
         </div>
+      </div>
     </section>
   )
 }
